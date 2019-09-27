@@ -1,12 +1,6 @@
 .accordion {
   width: 540px;
 
-  &__item {
-    & + & {
-      margin-top: 10px;
-    }
-  }
-
   &__header,
   &__body {
     border-radius: 8px;
@@ -26,6 +20,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 500ms ease;
+    margin-bottom: 10px;
 
     .opened & {
       max-height: 200vh;
