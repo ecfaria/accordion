@@ -11,9 +11,25 @@
     margin-bottom: 10px;
     padding: 23px 21px 24px;
     font-size: 18px;
-    display: block;
+    display: inline-flex;
     width: 100%;
     text-align: left;
+    position: relative;
+    align-items: center;
+
+    &::after {
+      content: '+';
+      font-size: 30px;
+      line-height: 20px;
+      display: block;
+      margin-left: auto;
+    }
+
+    .opened & {
+      &::after {
+        content: '-';
+      }
+    }
   }
 
   &__tab {
