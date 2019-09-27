@@ -9,22 +9,32 @@
 
   &__header,
   &__body {
-    border: 2px solid #000;
     border-radius: 8px;
   }
 
   &__header {
+    border: 2px solid #000;
     margin-bottom: 10px;
     padding: 23px 21px 24px;
     font-size: 18px;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  &__tab {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 500ms ease;
+
+    .opened & {
+      max-height: 200vh;
+      overflow: scroll;
+    }
   }
 
   &__body {
     padding: 25px 23px 25px 22px;
-    display: none;
-
-    .opened & {
-      display: block;
-    }
+    border: 2px solid #000;
   }
 }
