@@ -1,0 +1,25 @@
+.accordion {
+  max-width: 540px;
+
+  &__item {
+    & + & {
+      margin-top: 10px;
+    }
+  }
+
+  &__header,
+  &__body {
+    border: 2px solid #000;
+    border-radius: 8px;
+  }
+
+  &__header {
+    margin-bottom: 10px;
+    padding: 23px 21px 24px;
+    font-size: 18px;
+  }
+
+  &__body {
+    padding: 25px 23px 12px 22px;
+  }
+}

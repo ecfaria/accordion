@@ -1,0 +1,9 @@
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+p {
+  & + p {
+    margin-top: 20px;
+  }
+}
