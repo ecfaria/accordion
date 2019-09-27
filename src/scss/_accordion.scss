@@ -1,5 +1,5 @@
 .accordion {
-  max-width: 540px;
+  width: 540px;
 
   &__item {
     & + & {
@@ -20,6 +20,11 @@
   }
 
   &__body {
-    padding: 25px 23px 12px 22px;
+    padding: 25px 23px 25px 22px;
+    display: none;
+
+    .opened & {
+      display: block;
+    }
   }
 }

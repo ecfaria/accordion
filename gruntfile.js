@@ -1,12 +1,6 @@
 'use strict';
 module.exports = function(grunt) {
   grunt.initConfig({
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: ['Gruntfile.js', 'src/js/**/*.js', '!dist/app.min.js']
-    },
     sass: {
       dist: {
         options: {
@@ -40,7 +34,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['src/js/**/*.js'],
-        tasks: ['jshint', 'uglify']
+        tasks: ['uglify']
       },
       html: {
         files: ['index.html']
@@ -53,8 +47,7 @@ module.exports = function(grunt) {
 
   // Load tasks
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-uglify-es');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
 
